@@ -1,12 +1,11 @@
 .DS_Store
 .packages
 assets/.DS_Store
-assets/SourceSansPro.ttf
-assets/construction.jpg
-assets/dollars.jpg
-assets/friends.jpg
-assets/icon.png
-assets/moving.jpg
+assets/construction_arrow.svg
+assets/dollars_arrow.png
+assets/friends_arrow.svg
+assets/icon_300.png
+assets/moving_arrow.png
 favicon.ico
 index.html
 main.dart.js

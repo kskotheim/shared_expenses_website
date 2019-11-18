@@ -11,19 +11,14 @@ void main() {
   var pageHeight = window.innerHeight;
 
   document.body.style.background =
-      "url(assets/icon.png) no-repeat fixed center";
+      "url(assets/icon_300.png) no-repeat fixed center";
 
   window.onScroll.listen((event) {
     if (window.pageYOffset > 0) {
       var opac = (window.pageYOffset / pageHeight);
       document.body.style.background =
-          "linear-gradient(rgba(255, 255, 255, $opac), rgba(255, 255, 255, $opac)), url(assets/icon.png) no-repeat fixed center";
+          "linear-gradient(rgba(255, 255, 255, $opac), rgba(255, 255, 255, $opac)), url(assets/icon_300.png) no-repeat fixed center";
     }
-    // if (window.pageYOffset > pageHeight * 1.2) {
-    //   var opac = 1 - ((window.pageYOffset - pageHeight * 1.2) / pageHeight);
-    //   document.body.style.background =
-    //       'linear-gradient(rgba(255, 255, 255, $opac), rgba(255, 255, 255, $opac)), url(assets/friends.jpg) no-repeat fixed center contain';
-    // }
   });
 
   subtitle.children.add(
@@ -44,10 +39,10 @@ void main() {
     "It is still in development but it is ready to use, so if you're interested in trying it out and would be willing to give some feedback, let us know!"
   ];
   List<String> pictures = [
-    "url(assets/dollars.jpg)",
-    "url(assets/moving.jpg)",
-    "url(assets/friends.jpg)",
-    "url(assets/construction.jpg)"
+    "url(assets/dollars_arrow.png)",
+    "url(assets/moving_arrow.png)",
+    "url(assets/friends_arrow.svg)",
+    "url(assets/construction_arrow.svg)"
   ];
 
   void addContent(int i) {
@@ -63,10 +58,11 @@ void main() {
       addContent(i);
       content.onClick.listen((event) {
         i++;
-        if (i < howItWorks.length) {
-          content.children.removeLast();
-          addContent(i);
+        if (i >= howItWorks.length) {
+          i=0;          
         }
+        content.children.removeLast();
+        addContent(i);
       });
 
       subtitle.children.removeLast();
@@ -83,7 +79,7 @@ Element moreInfoButton(){
   buttonElement.style.width = '300px';
   buttonElement.style.margin = 'auto';
   buttonElement.children.add(Subtitle(text:'More info').getElement());
-  buttonElement.style.border = "1px Silver Solid";
+  buttonElement.style.border = "4px #228d57 Solid";
 
   return buttonElement;
 }
@@ -112,7 +108,7 @@ class PictureContainer {
   Element getElement() {
     Element element = Element.tag('div');
     element.style.height = "500px";
-    element.style.background = "linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .4)), $picture no-repeat center";
+    element.style.background = "linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .3)), $picture no-repeat center";
     element.style.backgroundSize = "500px 500px";
     // element.attributes['background-image'] = picture;
     element.children.add(Subtitle(text: text).getElement());

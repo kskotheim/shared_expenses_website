@@ -1134,7 +1134,7 @@ dA:function(){var u,t,s,r,q="newElement",p={},o=document,n=o.querySelector("#tit
 n.textContent="Shared Expenses"
 u=window.innerHeight
 o=o.body.style
-o.background="url(assets/icon.png) no-repeat fixed center"
+o.background="url(assets/icon_300.png) no-repeat fixed center"
 o=W.a
 W.bV(window,"scroll",H.h(new F.ct(u),{func:1,ret:-1,args:[o]}),!1,o)
 o=J.al(m)
@@ -1145,7 +1145,7 @@ J.X(k).k(0,new F.S("contact: kris@sharedexpenses.app","contact").A())
 p.a=!1
 t=[P.l]
 s=H.W(["For a group of roommates who share utility bills, calculating who owes what can be a pain.","It can be especially difficult if people's obligations change, like if someone moves in or out and that date doesn't align with when any bills are for.","Shared Expenses makes it easy to keep track of bills and payments within a group, and adjusting individual responsibilities by date is especially easy.","It is still in development but it is ready to use, so if you're interested in trying it out and would be willing to give some feedback, let us know!"],t)
-r=H.W(["url(assets/dollars.jpg)","url(assets/moving.jpg)","url(assets/friends.jpg)","url(assets/construction.jpg)"],t)
+r=H.W(["url(assets/dollars_arrow.png)","url(assets/moving_arrow.png)","url(assets/friends_arrow.svg)","url(assets/construction_arrow.svg)"],t)
 o=o.gN(m)
 t=H.i(o,0)
 W.bV(o.a,o.b,H.h(new F.cu(p,new F.cs(l,s,r),l,s,m),{func:1,ret:-1,args:[t]}),!1,t)},
@@ -1155,7 +1155,7 @@ t=u.style
 t.margin="auto"
 u.appendChild(new F.S("More info","newElement").A())
 t=u.style
-t.border="1px Silver Solid"
+t.border="4px #228d57 Solid"
 return u},
 ct:function ct(a){this.a=a},
 cs:function cs(a,b,c){this.a=a
@@ -2033,7 +2033,7 @@ t=this.a
 if(typeof t!=="number")return H.dy(t)
 s=u/t
 t=document.body.style
-u="linear-gradient(rgba(255, 255, 255, "+H.e(s)+"), rgba(255, 255, 255, "+H.e(s)+")), url(assets/icon.png) no-repeat fixed center"
+u="linear-gradient(rgba(255, 255, 255, "+H.e(s)+"), rgba(255, 255, 255, "+H.e(s)+")), url(assets/icon_300.png) no-repeat fixed center"
 t.background=u}},
 $S:15}
 F.cs.prototype={
@@ -2045,7 +2045,7 @@ t=H.j(W.dh("div",null),"$io")
 s=t.style
 s.height="500px"
 s=t.style
-u="linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .4)), "+u+" no-repeat center"
+u="linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .3)), "+u+" no-repeat center"
 s.background=u
 u=t.style
 C.h.ag(u,(u&&C.h).ad(u,"background-size"),"500px 500px","")
@@ -2073,8 +2073,9 @@ F.cr.prototype={
 $1:function(a){var u
 H.j(a,"$iy")
 u=this.a
-if(++u.a<4){J.X(this.c).G(0)
-this.d.$1(u.a)}},
+if(++u.a>=4)u.a=0
+J.X(this.c).G(0)
+this.d.$1(u.a)},
 $S:5}
 F.S.prototype={
 A:function(){var u=H.j(W.dh("p",null),"$io")
